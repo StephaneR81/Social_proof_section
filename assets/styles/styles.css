@@ -1,3 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
 * {
   box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'League Spartan', Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  background-color: white;
+}
+
+h1,
+h2,
+h3,
+main,
+article,
+div,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  max-width: 375px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("./../img/bg-pattern-top-mobile.svg"), url("./../img/bg-pattern-bottom-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+}
+
+.introduction h1 {
+  margin-top: 80px;
+  padding: 0 50px;
+  text-align: center;
+  line-height: 32px;
+  color: #502050;
+  font-size: 40px;
+}
+
+.introduction p {
+  margin-top: 20px;
+  padding: 0 22px;
+  text-align: center;
+  font-size: 19px;
+  color: #937b92;
+  font-weight: 500;
+}
+
+.ratings {
+  margin-top: 40px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.ratings .rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f7f2f7;
+}
+
+.ratings .rating ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+  list-style: none;
+}
+
+.ratings .rating h2 {
+  color: #502050;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.cards {
+  margin-top: 50px;
+}
+
+.cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 20px;
+  padding: 50px 30px;
+  background-color: #502050;
+  border-radius: 8px;
+  color: white;
+}
+
+.cards .card .avatar {
+  display: flex;
+}
+
+.cards .card .avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.cards .card .avatar h3 {
+  margin-left: 20px;
+}
+
+.cards .card .avatar span {
+  color: #ee68a4;
+  font-weight: 400;
+}
+
+.cards .card p {
+  margin-top: 25px;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 1440px) {
+  .main {
+    max-width: initial;
+    width: 80%;
+    flex-flow: row wrap;
+    background-image: url("./../img/bg-pattern-top-desktop.svg"), url("./../img/bg-pattern-bottom-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+  }
+  .introduction {
+    margin-top: 65px;
+    width: 50%;
+  }
+  .introduction h1 {
+    padding: 0;
+    padding-left: 20px;
+    text-align: left;
+    font-size: 60px;
+    line-height: 50px;
+    width: 450px;
+  }
+  .introduction p {
+    padding: 0;
+    padding-left: 20px;
+    text-align: left;
+    font-size: 18px;
+    width: 450px;
+  }
+  .ratings {
+    width: 50%;
+    padding: 0 20px;
+  }
+  .ratings .rating {
+    flex-direction: row;
+    width: 450px;
+    margin-top: 15px;
+    padding: 10px;
+  }
+  .ratings .rating ul {
+    padding: 10px;
+  }
+  .ratings .rating ul li {
+    margin-left: 5px;
+  }
+  .ratings .rating h2 {
+    margin-left: 50px;
+    margin-top: 0;
+  }
+  .ratings .rating:nth-child(2) {
+    margin-left: 50px;
+  }
+  .ratings .rating:nth-child(3) {
+    margin-left: 100px;
+  }
+  .cards {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .cards .card {
+    padding: 40px 30px;
+    width: 369px;
+  }
+  .cards .card:nth-child(1) {
+    align-self: flex-start;
+  }
+  .cards .card:nth-child(2) {
+    margin-top: 50px;
+    align-self: center;
+  }
+  .cards .card:nth-child(3) {
+    margin-top: 100px;
+    align-self: flex-end;
+  }
 }
